@@ -8,12 +8,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Homepage />}>
           <Route index element={<Homepage />} />
           <Route path="booking" element={<BookingPage />} />
-          {/* Using path="*"" means "match anything", so this route
-            acts like a catch-all for URLs that we don't have explicit
-            routes for. */}
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
