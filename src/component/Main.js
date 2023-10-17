@@ -1,14 +1,14 @@
-import Herosection from "./Herosection";
-import Highlights from "./Highlights";
-import Testimonials from "./Testimonials";
-import About from "./About";
+import CallToAction from "./CallToAction";
+import Specials from "./Specials";
+import CustomersSay from "./CustomersSay";
+import Chicago from "./Chicago";
 function Main() {
   return (
     <main>
-      <Herosection />
-      <Highlights />
-      <Testimonials />
-      <About />
+      <CallToAction />
+      <Specials />
+      <CustomersSay />
+      <Chicago />
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import restauran from "../assets/restaurant-chef.jpg";
-function About() {
+function Chicago() {
   return (
     <div id="about" class="box">
       <div class="restauran-about">
@@ -17,4 +17,4 @@ function About() {
     </div>
   );
 }
-export default About;
+export default Chicago;

@@ -1,4 +1,4 @@
-function Highlights() {
+function Specials() {
   return (
     <div class="box highlight">
       <div class="header">
@@ -55,4 +55,4 @@ function Highlights() {
     </div>
   );
 }
-export default Highlights;
+export default Specials;

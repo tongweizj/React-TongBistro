@@ -1,5 +1,5 @@
 import herobanner from "../assets/restauranfood.jpg";
-function Herosection() {
+function CallToAction() {
   return (
     <div class="fullbox herosection">
       <div id="herosection" class="box">
@@ -19,4 +19,4 @@ function Herosection() {
     </div>
   );
 }
-export default Herosection;
+export default CallToAction;

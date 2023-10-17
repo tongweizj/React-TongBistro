@@ -1,5 +1,5 @@
 import Reviewer from "./Reviewer";
-function Testimonials() {
+function CustomersSay() {
   return (
     <div class="fullbox">
       <div id="testimonials" class="box">
@@ -14,4 +14,4 @@ function Testimonials() {
     </div>
   );
 }
-export default Testimonials;
+export default CustomersSay;
