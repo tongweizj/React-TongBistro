@@ -1,29 +1,22 @@
 import "./App.css";
-import Nav from "./component/Nav";
-import Main from "./component/Main";
-import Footer from "./component/Footer";
-import Homepage from "./Homepage";
-import { Routes, Route, Link } from "react-router-dom";
-import BookingPage from "./BookingPage";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import BookingPage from "./pages/BookingPage";
+import Layout from "./Layout";
+import NoMatch from "./pages/NoPage";
 function App() {
   return (
     <>
-      <div>
-        nav
-        <nav>
-          <Link to="/" className="nav-item">
-            Homepage
-          </Link>
-          <Link to="/about" className="nav-item">
-            About Little Lemon
-          </Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Homepage />}></Route>
-          <Route path="/about" element={<BookingPage />}></Route>
-        </Routes>
-      </div>
-      <Homepage />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="booking" element={<BookingPage />} />
+          {/* Using path="*"" means "match anything", so this route
+            acts like a catch-all for URLs that we don't have explicit
+            routes for. */}
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
     </>
   );
 }
