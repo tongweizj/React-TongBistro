@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 function Nav() {
   return (
-    <>
+    <div className="nav">
+      <div id="logo">
+        <img src={logo} alt="LITTLE LEMON" />
+      </div>
       <nav>
         <ul>
           <li>
@@ -15,17 +18,17 @@ function Nav() {
             <Link to="/">Menu</Link>
           </li>
           <li>
-            <Link to="/">Reservations</Link>
+            <Link to="/booking">Reservations</Link>
           </li>
           <li>
-            <Link to="/booking">Order Online</Link>
+            <Link to="/">Order Online</Link>
           </li>
           <li>
             <Link to="/">Login</Link>
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
 export default Nav;

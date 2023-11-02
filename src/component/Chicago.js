@@ -1,18 +1,19 @@
-import restauran from "../assets/restaurant-chef.jpg";
+import restauran from "../assets/marioadriantop.jpg";
+import chef2 from "../assets/Mario-Adrian.jpg";
 function Chicago() {
   return (
-    <div id="about" class="box">
-      <div class="restauran-about">
-        <h2>Little Lemon</h2>
-        <h3>Chicago</h3>
+    <div id="about" className="box">
+      <div className="restauran-about">
+        <h2 className="title yellow">About us</h2>
+        <h3  className="subtitle">Mario & Adrian</h3>
         <p>
-          Lorem insum dolor sit amet. lor Aorror corvollic ric lerom dol In
-          tomrue reru veroratic lo go eror irrum ¿olor cit amet Aenean convalis
-          nis loren do In tempus neglie venenatis k deler IACC
+        We're Mario and Adrian, two passionate chefs who share a love for cooking Italian, Turkish, and Greek food.
+Our menu features a wide range of delicious dishes that showcase the unique flavors and traditions of Italian, Turkish, and Greek cuisine.
         </p>
       </div>
-      <div class="restauran-img">
-        <img src={restauran} />
+      <div className="restauran-img">
+        <img className="chefR" src={chef2} alt="restauran" />
+        <img className="chefL" src={restauran} alt="restauran chef" />
       </div>
     </div>
   );

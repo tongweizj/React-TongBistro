@@ -1,56 +1,47 @@
+import SpecialsItem from "./SpecialsItem";
+import imgA from "../assets/Asset22.png";
+import imgB from "../assets/Asset23.png";
+import imgC from "../assets/Asset24.png";
+const data = [
+  {
+    id: "1",
+    title: "Tiramisu",
+    description: "The best tiramisu in town",
+    image: imgA,
+    price: "$5.00",
+  },
+  {
+    id: "2",
+    title: "Lemon Ice Cream",
+    description: "Mind blowing taste",
+    image: imgB,
+    price: "$4.50",
+  },
+  {
+    id: "3",
+    title: "Chocolate mousse",
+    description: "Unexplored flavour",
+    image: imgC,
+    price: "$6.00",
+  },
+];
+
 function Specials() {
+  const listItems = data.map((item) => {
+    return (
+      <li key={item.id} className="cards_item">
+        <SpecialsItem data={item} />
+      </li>
+    );
+  });
   return (
-    <div class="box highlight">
-      <div class="header">
-        <h2>This weeks specials!</h2>
-        <button>Online Menu</button>
+    <div className="box highlight">
+      <div className="header">
+        <h2 className="section-title">This weeks specials!</h2>
+        <button className="button-primary">Online Menu</button>
       </div>
-      <div class="food-cards">
-        <ul class="cards">
-          <li class="cards__item">
-            <div class="card">
-              <div class="card__image card__image--fence"></div>
-              <div class="card__content">
-                <div class="card__title">Flex</div>
-                <p class="card__text">
-                  This is the shorthand for flex-grow, flex-shrink and
-                  flex-basis combined. The second and third parameters
-                  (flex-shrink and flex-basis) are optional. Default is 0 1
-                  auto.{" "}
-                </p>
-                <button class="btn btn--block card__btn">Button</button>
-              </div>
-            </div>
-          </li>
-          <li class="cards__item">
-            <div class="card">
-              <div class="card__image card__image--river"></div>
-              <div class="card__content">
-                <div class="card__title">Flex Grow</div>
-                <p class="card__text">
-                  This defines the ability for a flex item to grow if necessary.
-                  It accepts a unitless value that serves as a proportion. It
-                  dictates what amount of the available space inside the flex
-                  container the item should take up.
-                </p>
-                <button class="btn btn--block card__btn">Button</button>
-              </div>
-            </div>
-          </li>
-          <li class="cards__item">
-            <div class="card">
-              <div class="card__image card__image--record"></div>
-              <div class="card__content">
-                <div class="card__title">Flex Shrink</div>
-                <p class="card__text">
-                  This defines the ability for a flex item to shrink if
-                  necessary. Negative numbers are invalid.
-                </p>
-                <button class="btn btn--block card__btn">Button</button>
-              </div>
-            </div>
-          </li>
-        </ul>
+      <div className="food-cards">
+        <ul className="cards">{listItems}</ul>
       </div>
     </div>
   );
