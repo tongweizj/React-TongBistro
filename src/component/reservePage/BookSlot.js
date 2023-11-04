@@ -1,9 +1,8 @@
-import {  useBookTime } from "../../BookTimeContext";
 function BookSlot(props) {
-  const { bookTime } = useBookTime();
-  const listItems = bookTime.map((item, index) => {
+
+  const listItems = props.availableTimes.map((item, index) => {
     return (
-      <option value={index}>
+      <option key={index} value={index}>
         {index + 17}:00-{item === undefined ? "Available" : "Unavailable"}
       </option>
     );

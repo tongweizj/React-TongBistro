@@ -1,14 +1,14 @@
 import { useState } from "react";
 import BookSlot from "./BookSlot";
-import {  useBookTime } from "../../BookTimeContext";
-function BookingForm() {
+
+function BookingForm(props) {
   const [formData, setFormData] = useState({
     date: "2023-11-27",
     time: "19:00",
     guests: "3",
     occasion: "",
   });
-  const {toggleTime} = useBookTime();
+
   const [selectedSlot, setSelectedSlot] = useState(100);
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default HTML form behavior
@@ -18,7 +18,7 @@ function BookingForm() {
       guests: "3",
       occasion: "",
     })); // Clear the input fields after the form is submitted
-    toggleTime(selectedSlot);
+    props.updateTimes(selectedSlot);
   };
   const handleBookSlot = (index) => {
     setSelectedSlot(index);
@@ -42,7 +42,7 @@ function BookingForm() {
             }))
           }
         />
-        <BookSlot handleBookSlot={handleBookSlot} />
+        <BookSlot availableTimes={props.availableTimes} handleBookSlot={handleBookSlot} />
         <label htmlFor="guests">Number of guests</label>
         <input
           type="number"
