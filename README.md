@@ -72,3 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 DATE: 2023-11-27
 TIME: 17:00
+
+
+## branch
+
+0.1 useContext
+这里在存储订桌时间的时候，错误使用了useContext。做成全局变量。
