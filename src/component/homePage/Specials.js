@@ -1,7 +1,7 @@
 import SpecialsItem from "./SpecialsItem";
-import imgA from "../assets/Asset22.png";
-import imgB from "../assets/Asset23.png";
-import imgC from "../assets/Asset24.png";
+import imgA from "../../assets/Asset22.png";
+import imgB from "../../assets/Asset23.png";
+import imgC from "../../assets/Asset24.png";
 const data = [
   {
     id: "1",

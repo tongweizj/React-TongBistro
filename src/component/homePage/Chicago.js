@@ -1,5 +1,5 @@
-import restauran from "../assets/marioadriantop.jpg";
-import chef2 from "../assets/Mario-Adrian.jpg";
+import restauran from "../../assets/marioadriantop.jpg";
+import chef2 from "../../assets/Mario-Adrian.jpg";
 function Chicago() {
   return (
     <div id="about" className="box">

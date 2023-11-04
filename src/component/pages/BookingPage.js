@@ -1,6 +1,6 @@
-import Footer from "../component/Footer";
-import Nav from "../component/Nav";
-import BookingForm from "../component/BookingForm";
+import Footer from "../../component/Footer";
+import Nav from "../../component/Nav";
+import BookingForm from "../reservePage/BookingForm";
 function BookingPage() {
   return (
     <>

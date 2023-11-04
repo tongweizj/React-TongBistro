@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import BookingPage from "./pages/BookingPage";
-import NoMatch from "./pages/NoPage";
+import Homepage from "./component/pages/HomePage";
+import BookingPage from "./component/pages/BookingPage";
+import NoMatch from "./component/pages/NoPage";
 function App() {
   return (
     <>

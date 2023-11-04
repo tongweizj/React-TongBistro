@@ -1,4 +1,4 @@
-import herobanner from "../assets/restauranfood.jpg";
+import herobanner from "../../assets/restauranfood.jpg";
 function CallToAction() {
   return (
     <div className="fullbox herosection">
