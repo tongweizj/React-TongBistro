@@ -3,46 +3,42 @@ import BookSlot from "./BookSlot";
 
 function BookingForm(props) {
   const [formData, setFormData] = useState({
-    date: "2023-11-27",
-    time: "19:00",
-    guests: "3",
+    date: `${props.date}`,
+    time: `${props.availableTimes}`,
+    guests: "",
     occasion: "",
   });
 
-  const [selectedSlot, setSelectedSlot] = useState(100);
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default HTML form behavior
+  const handleInputChange = (e) => {
+    console.log('name:',e.target.name,'value:', e.target.value)
+    if (e.target.name === "date") {
+      props.updateTimes(e.target.value);
+    }
     setFormData((prevFormData) => ({
       ...prevFormData,
-      date: "2023-11-27",
-      guests: "3",
-      occasion: "",
-    })); // Clear the input fields after the form is submitted
-    props.updateTimes(selectedSlot);
+      [e.target.name]: e.target.value,
+    }));
   };
-  const handleBookSlot = (index) => {
-    setSelectedSlot(index);
-    let timeStr = `${index + 17}:00`;
-    setFormData((prevFormData) => ({ ...prevFormData, time: timeStr }));
-  };
+
+
+
+
   return (
     <div className="box highlight">
-      <form className="booking-form" onSubmit={handleSubmit}>
+      <form className="booking-form" onSubmit={props.submitForm}>
         <label htmlFor="resDate">Choose date</label>
         <input
           type="date"
           id="resDate"
           placeholder="resDate"
-          name="resDate"
+          name="date"
           value={formData.date}
-          onChange={(e) =>
-            setFormData((prevFormData) => ({
-              ...prevFormData,
-              date: e.target.value,
-            }))
-          }
+          onChange={handleInputChange}
         />
-        <BookSlot availableTimes={props.availableTimes} handleBookSlot={handleBookSlot} />
+        <BookSlot
+          availableTimes={props.availableTimes}
+          handleInputChange={handleInputChange}
+        />
         <label htmlFor="guests">Number of guests</label>
         <input
           type="number"
@@ -51,23 +47,15 @@ function BookingForm(props) {
           min="1"
           max="10"
           id="guests"
-          onChange={(e) =>
-            setFormData((prevFormData) => ({
-              ...prevFormData,
-              guests: e.target.value,
-            }))
-          }
+          name="guests"
+          onChange={handleInputChange}
         />
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
-          value={formData.occasion}
-          onChange={(e) =>
-            setFormData((prevFormData) => ({
-              ...prevFormData,
-              occasion: e.target.value,
-            }))
-          }
+          value=''
+          name="occasion"
+          onChange={handleInputChange}
         >
           <option>Birthday</option>
           <option>Anniversary</option>

@@ -2,8 +2,8 @@ function BookSlot(props) {
 
   const listItems = props.availableTimes.map((item, index) => {
     return (
-      <option key={index} value={index}>
-        {index + 17}:00-{item === undefined ? "Available" : "Unavailable"}
+      <option key={index} >
+       {item}
       </option>
     );
   });
@@ -12,8 +12,8 @@ function BookSlot(props) {
       <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time"
-        value={props.time}
-        onChange={(e) => props.handleBookSlot(Number(e.target.value))}
+        name="time"
+        onChange={props.handleInputChange}
       >
         {listItems}
       </select>
