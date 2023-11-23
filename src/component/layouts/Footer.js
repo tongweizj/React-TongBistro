@@ -4,7 +4,7 @@ function Footer() {
     <div className="fullbox topborder">
       <footer className="box">
         <div className="footer-logo">
-          <img src={logo} width="100%" alt="tong" />
+          <img src={logo} width="120px" alt="tong" />
         </div>
         <div>
           <h5 className="section-title">Navigation</h5>

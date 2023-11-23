@@ -18,7 +18,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+svg {
+  display: inline;
+}
 #root {
   margin: 0;
   padding: 0;
@@ -114,6 +116,10 @@ a:hover {
 /* selected link */
 a:active {
   color: #495e57;
+}
+
+a.button:hover{
+  color:#ffffff;
 }
 .text-decoration-none {
   text-decoration: none!important;
@@ -298,12 +304,16 @@ font-size: 1rem;
 .yellowsection {
   background-color: #f4ce14;
 }
+
+.stars svg{
+  display: inline;
+}
 .rating {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   margin: 6px;
-  width: 20%;
+  width: 23%;
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -383,24 +393,29 @@ font-size: 1rem;
 }
 /* footer*/
 footer {
-  background-color: white;
+  /* background-color: white; */
   margin: 0 auto;
   padding: 0;
   width: 900px;
   display: grid;
-  grid-template-columns: 3fr 2fr 3fr 3fr;
+  grid-template-columns: 2fr 2fr 3fr 3fr;
+  color: #ffffff;
 }
 .topborder {
   border-top:1px solid #495e57;
   padding-top: 30px;
+  background-color: #495e57;
 }
 .footer-logo {
   margin: 0px 50px 0 0;
 }
 footer  a{
+  color: #ffffff!important;
   font-size: 16px!important;
   font-weight: 400;
 }
+
+
 
 /*booking form*/
 .background-imge {
@@ -410,4 +425,16 @@ footer  a{
 }
 .booking-form{
   display: grid; max-width: 200px; gap: 20px
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 10px;
+}
+.grid-item {
+
+  padding: 5px;
+  font-size: 16px;
+  text-align: left;
 }

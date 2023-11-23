@@ -30,6 +30,7 @@ function BookingPage() {
 
   // 提交form的操作
   const submitForm = (formData) => {
+    console.log('onSubmit:',formData)
     let response = submitAPI();
     if (response) setIsFormSubmitted(true);
   };
